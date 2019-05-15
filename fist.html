@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html id="first">
+    
+    <head>
+
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css" />
+        <title>Колко ми се ходи на море</title>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    </head>
+
+    <body id="body">
+        <header class="header">
+            <h1> Колко ми се ходи на море </h1>
+            <nav>
+                <ul>
+                    <li><a href="fist.html">Начало</a></li>
+                    <li><a href="third.html">Любими спомени</a></li>
+                </ul>
+            </nav>
+        </header>
+         
+        <br>
+        <br>
+        <br>
+        <br>
+
+    
+        <h2 id="sea">
+            Колко ми се ходи на море, все още сме май месец а аз правя проекти при Кака и по Web.А ми се иска да си седя на плажа с биричка в ръка и да чувам този така приятен звук на морето.
+        </h2>
+
+    <audio controls>
+            <source src="Calm-ocean-sounds-calming-seas.mp3" type="audio/mpeg">
+    </audio>
+    
+    <h2 id="text">Ако всичко мине по план и учителите се смилят над мен и <span id="bold">не ме оставят на поправка </span>, до моето море остава само:</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("July 23, 2019 15:37:25").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+            
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+            
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+        // Output the result in an element with id="demo"
+        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+            
+        // If the count down is over, write some text 
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+        }, 1000);
+    </script>
+
+    <div id="footer">
+        <p>© Колко ми се ходи на море 2019 | Created by Victor Micilkov</p>
+    </div>   
+
+    </body>
+
+</html>
